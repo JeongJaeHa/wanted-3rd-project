@@ -22,7 +22,7 @@ module.exports = new EntitySchema({
         },
         weather: {
             type: "varchar",
-            nullable: false
+            nullable: true
         },
         created_at: {
             type: "timestamp",
