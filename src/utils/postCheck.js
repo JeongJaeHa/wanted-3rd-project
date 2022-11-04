@@ -6,7 +6,6 @@ const Error = require("../middlewares/errorConstructor");
 
 const postExist = async (id) => {
     const result = await postDao.existCheck(id);
-    console.log(result.length)
     if(result.length == 0) {
         throw new Error(responseMessage.PAGE_NOT_EXIST, statusCode.BAD_REQUEST);
     }
