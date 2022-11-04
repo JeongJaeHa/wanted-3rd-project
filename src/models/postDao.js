@@ -3,6 +3,7 @@ const { v4: uuid } = require('uuid');
 const posts = require("../entities/posts");
 const responseMessage = require("../constants/responseMessage");
 const statusCode = require("../constants/statusCode");
+const Error = require("../middlewares/errorConstructor");
 
 const createPost = async (title, content, hashedPassword, weather) => {
     try{

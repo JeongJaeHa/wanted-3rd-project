@@ -2,10 +2,13 @@ const postDao = require("../models/postDao");
 const responseMessage = require("../constants/responseMessage");
 const statusCode = require("../constants/statusCode");
 const bcrypt = require("bcrypt");
+const Error = require("../middlewares/errorConstructor");
 
 const postExist = async (id) => {
     const result = await postDao.existCheck(id);
-    if(result.length == 0) throw new Error(responseMessage.PAGE_NOT_EXIST, statusCode.BAD_REQUEST);
+    if(result.length == 0) {
+        throw new Error(responseMessage.PAGE_NOT_EXIST, statusCode.BAD_REQUEST);
+    }
 }
 
 const passwordCheck = async (id, password) => {
