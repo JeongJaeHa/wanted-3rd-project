@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const testRouter = require("./testRouter")
+const postRouter = require("./postRouter")
 
-router.use("/test", testRouter.router)
+router.use("/post", postRouter.router)
 
 module.exports = router;

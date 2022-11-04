@@ -10,7 +10,7 @@ const AppDataSource = new DataSource({
   database: process.env.TYPEORM_DATABASE,
   TIME_ZONE: process.env.TIME_ZONE,
   entities: [posts],
-  synchronize: true,
+  synchronize: false,
   logging: false,
 });
 
